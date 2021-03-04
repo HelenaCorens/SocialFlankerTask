@@ -1,0 +1,612 @@
+﻿<?xml version="1.0" ?>
+<PsychoPy2experiment encoding="utf-8" version="2021.1.2">
+  <Settings>
+    <Param name="Audio latency priority" updates="None" val="use prefs" valType="str"/>
+    <Param name="Audio lib" updates="None" val="use prefs" valType="str"/>
+    <Param name="Completed URL" updates="None" val="completedURL" valType="str"/>
+    <Param name="Data file delimiter" updates="None" val="auto" valType="str"/>
+    <Param name="Data filename" updates="None" val="u'data/%s_%s_%s' % (expInfo['participant'], expName, expInfo['date'])" valType="code"/>
+    <Param name="Enable Escape" updates="None" val="True" valType="bool"/>
+    <Param name="Experiment info" updates="None" val="{'participant': '', 'session': '001'}" valType="code"/>
+    <Param name="Force stereo" updates="None" val="True" valType="bool"/>
+    <Param name="Full-screen window" updates="None" val="True" valType="bool"/>
+    <Param name="HTML path" updates="None" val="html" valType="str"/>
+    <Param name="Incomplete URL" updates="None" val="incompleteURL" valType="str"/>
+    <Param name="JS libs" updates="None" val="packaged" valType="str"/>
+    <Param name="Monitor" updates="None" val="testMonitor" valType="str"/>
+    <Param name="Resources" updates="None" val="[]" valType="list"/>
+    <Param name="Save csv file" updates="None" val="True" valType="bool"/>
+    <Param name="Save excel file" updates="None" val="True" valType="bool"/>
+    <Param name="Save log file" updates="None" val="True" valType="bool"/>
+    <Param name="Save psydat file" updates="None" val="True" valType="bool"/>
+    <Param name="Save wide csv file" updates="None" val="True" valType="bool"/>
+    <Param name="Screen" updates="None" val="1" valType="num"/>
+    <Param name="Show info dlg" updates="None" val="True" valType="bool"/>
+    <Param name="Show mouse" updates="None" val="False" valType="bool"/>
+    <Param name="Units" updates="None" val="use prefs" valType="str"/>
+    <Param name="Use version" updates="None" val="" valType="str"/>
+    <Param name="Window size (pixels)" updates="None" val="[1280, 800]" valType="code"/>
+    <Param name="blendMode" updates="None" val="avg" valType="str"/>
+    <Param name="color" updates="None" val="$[0,0,0]" valType="str"/>
+    <Param name="colorSpace" updates="None" val="rgb" valType="str"/>
+    <Param name="expName" updates="None" val="Test2_CLEAN_rpep_Helena" valType="str"/>
+    <Param name="exportHTML" updates="None" val="on Sync" valType="str"/>
+    <Param name="logging level" updates="None" val="exp" valType="code"/>
+  </Settings>
+  <Routines>
+    <Routine name="trial">
+      <TextComponent name="txt_trial">
+        <Param name="color" updates="constant" val="white" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="contrast" updates="constant" val="1" valType="num"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.1" valType="code"/>
+        <Param name="name" updates="None" val="txt_trial" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="1" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="set every repeat" val="$stim&amp;#10;" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+      <KeyboardComponent name="key_resp_2">
+        <Param name="allowedKeys" updates="constant" val="'f','j'" valType="code"/>
+        <Param name="correctAns" updates="constant" val="" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="discard previous" updates="constant" val="True" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
+        <Param name="name" updates="None" val="key_resp_2" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="1.5" valType="code"/>
+        <Param name="store" updates="constant" val="last key" valType="str"/>
+        <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
+        <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
+      </KeyboardComponent>
+      <ImageComponent name="Rectangle_buttons">
+        <Param name="color" updates="constant" val="$[1,1,1]" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="contrast" updates="constant" val="1" valType="num"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
+        <Param name="flipVert" updates="constant" val="False" valType="bool"/>
+        <Param name="image" updates="constant" val="/Users/HC/Documents/MASTER 1/RPEP/Rpep_Helena_06:02/Rectangles/rect_noanswer.jpg" valType="str"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="mask" updates="constant" val="None" valType="str"/>
+        <Param name="name" updates="None" val="Rectangle_buttons" valType="code"/>
+        <Param name="opacity" updates="constant" val="0.7" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="size" updates="constant" val="(2, 2)" valType="code"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="1.5" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="texture resolution" updates="constant" val="128" valType="code"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+      </ImageComponent>
+    </Routine>
+    <Routine name="RSI">
+      <TextComponent name="RSI_txt">
+        <Param name="color" updates="constant" val="white" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="contrast" updates="constant" val="1" valType="num"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.15" valType="code"/>
+        <Param name="name" updates="None" val="RSI_txt" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="1" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="set every repeat" val="+" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+    </Routine>
+    <Routine name="General_Instruction">
+      <TextComponent name="general_instruct_txt">
+        <Param name="color" updates="constant" val="white" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="contrast" updates="constant" val="1" valType="num"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.1" valType="code"/>
+        <Param name="name" updates="None" val="general_instruct_txt" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="- General instructions experiment here -&amp;#10;&amp;#10;press space bar&amp;#10;" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+      <KeyboardComponent name="general_instruct_key">
+        <Param name="allowedKeys" updates="constant" val="'space'" valType="code"/>
+        <Param name="correctAns" updates="constant" val="" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="discard previous" updates="constant" val="True" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
+        <Param name="name" updates="None" val="general_instruct_key" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="store" updates="constant" val="last key" valType="str"/>
+        <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
+        <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
+      </KeyboardComponent>
+    </Routine>
+    <Routine name="Goodbye"/>
+    <Routine name="Error_estimation">
+      <TextComponent name="error_est_txt">
+        <Param name="color" updates="constant" val="white" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="contrast" updates="constant" val="1" valType="num"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.1" valType="code"/>
+        <Param name="name" updates="None" val="error_est_txt" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="&amp;#10;How many errors did the other participant make?&amp;#10;&amp;#10;" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+      <SliderComponent name="slider">
+        <Param name="borderColor" updates="constant" val="White" valType="color"/>
+        <Param name="color" updates="constant" val="LightGray" valType="color"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="contrast" updates="constant" val="1" valType="num"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="num"/>
+        <Param name="fillColor" updates="constant" val="Blue" valType="color"/>
+        <Param name="flip" updates="constant" val="False" valType="bool"/>
+        <Param name="font" updates="constant" val="Open Sans" valType="str"/>
+        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
+        <Param name="granularity" updates="constant" val="0" valType="num"/>
+        <Param name="labels" updates="constant" val="" valType="list"/>
+        <Param name="letterHeight" updates="constant" val="0.05" valType="num"/>
+        <Param name="name" updates="None" val="slider" valType="code"/>
+        <Param name="opacity" updates="constant" val="" valType="num"/>
+        <Param name="ori" updates="constant" val="0" valType="num"/>
+        <Param name="pos" updates="constant" val="(0, -0.6)" valType="list"/>
+        <Param name="readOnly" updates="constant" val="False" valType="bool"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="size" updates="constant" val="(1.0, 0.1)" valType="list"/>
+        <Param name="startEstim" updates="None" val="" valType="num"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="num"/>
+        <Param name="stopType" updates="None" val="condition" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="num"/>
+        <Param name="storeHistory" updates="constant" val="False" valType="bool"/>
+        <Param name="storeRating" updates="constant" val="True" valType="bool"/>
+        <Param name="storeRatingTime" updates="constant" val="True" valType="bool"/>
+        <Param name="styleTweaks" updates="constant" val="()" valType="list"/>
+        <Param name="styles" updates="constant" val="rating" valType="str"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="ticks" updates="constant" val="(1, 2)" valType="list"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+      </SliderComponent>
+    </Routine>
+    <Routine name="O">
+      <ImageComponent name="Rectangles">
+        <Param name="color" updates="constant" val="$[1,1,1]" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="contrast" updates="constant" val="1" valType="num"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
+        <Param name="flipVert" updates="constant" val="False" valType="bool"/>
+        <Param name="image" updates="constant" val="rectsocial/rect_neutral.jpg" valType="str"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="mask" updates="constant" val="None" valType="str"/>
+        <Param name="name" updates="None" val="Rectangles" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="size" updates="constant" val="(2, 2)" valType="code"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="2" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="texture resolution" updates="constant" val="512" valType="code"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+      </ImageComponent>
+      <ImageComponent name="Rectangle_O_Reaction">
+        <Param name="color" updates="constant" val="$[1,1,1]" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="contrast" updates="constant" val="1" valType="num"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
+        <Param name="flipVert" updates="constant" val="False" valType="bool"/>
+        <Param name="image" updates="set every repeat" val="$resp_other" valType="str"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="mask" updates="constant" val="None" valType="str"/>
+        <Param name="name" updates="None" val="Rectangle_O_Reaction" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="size" updates="constant" val="(2, 2)" valType="code"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="$rt_other" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="1" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="texture resolution" updates="constant" val="512" valType="code"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+      </ImageComponent>
+      <TextComponent name="txt_O">
+        <Param name="color" updates="constant" val="white" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="contrast" updates="constant" val="1" valType="num"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.15" valType="code"/>
+        <Param name="name" updates="None" val="txt_O" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="1.5" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="set every repeat" val="$stimulus" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+    </Routine>
+    <Routine name="P">
+      <ImageComponent name="Rectangles_2">
+        <Param name="color" updates="constant" val="$[1,1,1]" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="contrast" updates="constant" val="1" valType="num"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
+        <Param name="flipVert" updates="constant" val="False" valType="bool"/>
+        <Param name="image" updates="constant" val="rectsocial/rect_neutral.jpg" valType="str"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="mask" updates="constant" val="None" valType="str"/>
+        <Param name="name" updates="None" val="Rectangles_2" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="size" updates="constant" val="(2, 2)" valType="code"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="2" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="texture resolution" updates="constant" val="512" valType="code"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+      </ImageComponent>
+      <KeyboardComponent name="Key_resp_P">
+        <Param name="allowedKeys" updates="constant" val="'f','j'" valType="code"/>
+        <Param name="correctAns" updates="constant" val="" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="discard previous" updates="constant" val="True" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
+        <Param name="name" updates="None" val="Key_resp_P" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="2" valType="code"/>
+        <Param name="store" updates="constant" val="last key" valType="str"/>
+        <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
+        <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
+      </KeyboardComponent>
+      <TextComponent name="txt_P">
+        <Param name="color" updates="constant" val="white" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="contrast" updates="constant" val="1" valType="num"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.15" valType="code"/>
+        <Param name="name" updates="None" val="txt_P" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="1.5" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="set every repeat" val="$stimulus" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+    </Routine>
+    <Routine name="POP_instruct">
+      <TextComponent name="pop_instruct_txt">
+        <Param name="color" updates="constant" val="white" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="contrast" updates="constant" val="1" valType="num"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.1" valType="code"/>
+        <Param name="name" updates="None" val="pop_instruct_txt" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="PERFORM &amp;#10;OBSERVE&amp;#10;PERFORM&amp;#10;&amp;#10;press space bar when ready&amp;#10;" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+      <KeyboardComponent name="pop_instruct_key">
+        <Param name="allowedKeys" updates="constant" val="'space'" valType="code"/>
+        <Param name="correctAns" updates="constant" val="" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="discard previous" updates="constant" val="True" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
+        <Param name="name" updates="None" val="pop_instruct_key" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="store" updates="constant" val="last key" valType="str"/>
+        <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
+        <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
+      </KeyboardComponent>
+    </Routine>
+    <Routine name="OPP_instruct">
+      <TextComponent name="sequence_instruct_txt">
+        <Param name="color" updates="constant" val="white" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="contrast" updates="constant" val="1" valType="num"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.1" valType="code"/>
+        <Param name="name" updates="None" val="sequence_instruct_txt" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="OBSERVE&amp;#10;PERFORM&amp;#10;PERFORM&amp;#10;&amp;#10;press space bar&amp;#10;" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+      <KeyboardComponent name="seq_instruct_key">
+        <Param name="allowedKeys" updates="constant" val="'space'" valType="code"/>
+        <Param name="correctAns" updates="constant" val="" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="discard previous" updates="constant" val="True" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
+        <Param name="name" updates="None" val="seq_instruct_key" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="store" updates="constant" val="last key" valType="str"/>
+        <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
+        <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
+      </KeyboardComponent>
+    </Routine>
+    <Routine name="Practice"/>
+  </Routines>
+  <Flow>
+    <Routine name="General_Instruction"/>
+    <Routine name="Practice"/>
+    <LoopInitiator loopType="TrialHandler" name="Block">
+      <Param name="Selected rows" updates="None" val="" valType="str"/>
+      <Param name="conditions" updates="None" val="None" valType="str"/>
+      <Param name="conditionsFile" updates="None" val="" valType="str"/>
+      <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
+      <Param name="isTrials" updates="None" val="True" valType="bool"/>
+      <Param name="loopType" updates="None" val="sequential" valType="str"/>
+      <Param name="nReps" updates="None" val="10" valType="code"/>
+      <Param name="name" updates="None" val="Block" valType="code"/>
+      <Param name="random seed" updates="None" val="" valType="code"/>
+    </LoopInitiator>
+    <Routine name="OPP_instruct"/>
+    <LoopInitiator loopType="TrialHandler" name="OPP">
+      <Param name="Selected rows" updates="None" val="" valType="str"/>
+      <Param name="conditions" updates="None" val="None" valType="str"/>
+      <Param name="conditionsFile" updates="None" val="" valType="str"/>
+      <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
+      <Param name="isTrials" updates="None" val="True" valType="bool"/>
+      <Param name="loopType" updates="None" val="random" valType="str"/>
+      <Param name="nReps" updates="None" val="1" valType="code"/>
+      <Param name="name" updates="None" val="OPP" valType="code"/>
+      <Param name="random seed" updates="None" val="" valType="code"/>
+    </LoopInitiator>
+    <LoopInitiator loopType="TrialHandler" name="Trials_O1">
+      <Param name="Selected rows" updates="None" val="$random(1)*20" valType="str"/>
+      <Param name="conditions" updates="None" val="[{'stim': 'A', 'stimulus': '&lt;&lt;&lt;&lt;&lt;', 'congruency': 1, 'corResp': 'f', 'rt_other': 0.4, 'resp_other': 'rectsocial/r_left.jpg', 'acc_other': 1, 'rsi_time': None}, {'stim': 'B', 'stimulus': '&gt;&gt;&gt;&gt;&gt;', 'congruency': 1, 'corResp': 'j', 'rt_other': 0.5, 'resp_other': 'rectsocial/r_left.jpg', 'acc_other': 0, 'rsi_time': None}, {'stim': 'C', 'stimulus': '&lt;&lt;&gt;&lt;&lt;', 'congruency': 0, 'corResp': 'j', 'rt_other': 0.6, 'resp_other': 'rectsocial/r_right.jpg', 'acc_other': 1, 'rsi_time': None}, {'stim': 'D', 'stimulus': '&gt;&gt;&lt;&gt;&gt;', 'congruency': 0, 'corResp': 'f', 'rt_other': 0.7, 'resp_other': 'rectsocial/r_right.jpg', 'acc_other': 0, 'rsi_time': None}, {'stim': 'E', 'stimulus': '&lt;&lt;&lt;&lt;&lt;', 'congruency': 1, 'corResp': 'f', 'rt_other': 0.4, 'resp_other': 'rectsocial/r_left.jpg', 'acc_other': 1, 'rsi_time': None}, {'stim': 'F', 'stimulus': '&gt;&gt;&gt;&gt;&gt;', 'congruency': 1, 'corResp': 'j', 'rt_other': 0.5, 'resp_other': 'rectsocial/r_right.jpg', 'acc_other': 1, 'rsi_time': None}, {'stim': 'G', 'stimulus': '&lt;&lt;&gt;&lt;&lt;', 'congruency': 0, 'corResp': 'j', 'rt_other': 0.6, 'resp_other': 'rectsocial/r_left.jpg', 'acc_other': 0, 'rsi_time': None}, {'stim': 'H', 'stimulus': '&gt;&gt;&lt;&gt;&gt;', 'congruency': 0, 'corResp': 'f', 'rt_other': 0.7, 'resp_other': 'rectsocial/r_right.jpg', 'acc_other': 0, 'rsi_time': None}, {'stim': 'I', 'stimulus': '&lt;&lt;&lt;&lt;&lt;', 'congruency': 1, 'corResp': 'f', 'rt_other': 0.4, 'resp_other': 'rectsocial/r_left.jpg', 'acc_other': 1, 'rsi_time': None}, {'stim': 'J', 'stimulus': '&gt;&gt;&gt;&gt;&gt;', 'congruency': 1, 'corResp': 'j', 'rt_other': 0.5, 'resp_other': 'rectsocial/r_right.jpg', 'acc_other': 1, 'rsi_time': None}, {'stim': 'K', 'stimulus': '&lt;&lt;&gt;&lt;&lt;', 'congruency': 0, 'corResp': 'j', 'rt_other': 0.6, 'resp_other': 'rectsocial/r_right.jpg', 'acc_other': 1, 'rsi_time': None}, {'stim': 'L', 'stimulus': '&gt;&gt;&lt;&gt;&gt;', 'congruency': 0, 'corResp': 'f', 'rt_other': 0.7, 'resp_other': 'rectsocial/r_right.jpg', 'acc_other': 0, 'rsi_time': None}, {'stim': 'M', 'stimulus': '&lt;&lt;&lt;&lt;&lt;', 'congruency': 1, 'corResp': 'f', 'rt_other': 0.4, 'resp_other': 'rectsocial/r_left.jpg', 'acc_other': 1, 'rsi_time': None}, {'stim': 'N', 'stimulus': '&gt;&gt;&gt;&gt;&gt;', 'congruency': 1, 'corResp': 'j', 'rt_other': 0.5, 'resp_other': 'rectsocial/r_left.jpg', 'acc_other': 0, 'rsi_time': None}, {'stim': 'O', 'stimulus': '&lt;&lt;&gt;&lt;&lt;', 'congruency': 0, 'corResp': 'j', 'rt_other': 0.6, 'resp_other': 'rectsocial/r_right.jpg', 'acc_other': 1, 'rsi_time': None}, {'stim': 'P', 'stimulus': '&gt;&gt;&lt;&gt;&gt;', 'congruency': 0, 'corResp': 'f', 'rt_other': 0.7, 'resp_other': 'rectsocial/r_left.jpg', 'acc_other': 1, 'rsi_time': None}, {'stim': 'Q', 'stimulus': '&lt;&lt;&lt;&lt;&lt;', 'congruency': 1, 'corResp': 'f', 'rt_other': 0.4, 'resp_other': 'rectsocial/r_right.jpg', 'acc_other': 0, 'rsi_time': None}, {'stim': 'R', 'stimulus': '&gt;&gt;&gt;&gt;&gt;', 'congruency': 1, 'corResp': 'j', 'rt_other': 0.5, 'resp_other': 'rectsocial/r_right.jpg', 'acc_other': 1, 'rsi_time': None}, {'stim': 'S', 'stimulus': '&lt;&lt;&gt;&lt;&lt;', 'congruency': 0, 'corResp': 'j', 'rt_other': 0.6, 'resp_other': 'rectsocial/r_left.jpg', 'acc_other': 0, 'rsi_time': None}, {'stim': 'T', 'stimulus': '&gt;&gt;&lt;&gt;&gt;', 'congruency': 0, 'corResp': 'f', 'rt_other': 0.7, 'resp_other': 'rectsocial/r_left.jpg', 'acc_other': 1, 'rsi_time': None}, {'stim': 'U', 'stimulus': '&lt;&lt;&lt;&lt;&lt;', 'congruency': 1, 'corResp': 'f', 'rt_other': 0.4, 'resp_other': 'rectsocial/r_left.jpg', 'acc_other': 1, 'rsi_time': None}, {'stim': 'V', 'stimulus': '&gt;&gt;&gt;&gt;&gt;', 'congruency': 1, 'corResp': 'j', 'rt_other': 0.5, 'resp_other': 'rectsocial/r_right.jpg', 'acc_other': 1, 'rsi_time': None}, {'stim': 'W', 'stimulus': '&lt;&lt;&gt;&lt;&lt;', 'congruency': 0, 'corResp': 'j', 'rt_other': 0.6, 'resp_other': 'rectsocial/r_right.jpg', 'acc_other': 1, 'rsi_time': None}, {'stim': 'X', 'stimulus': '&gt;&gt;&lt;&gt;&gt;', 'congruency': 0, 'corResp': 'f', 'rt_other': 0.7, 'resp_other': 'rectsocial/r_left.jpg', 'acc_other': 1, 'rsi_time': None}, {'stim': 'Y', 'stimulus': '&lt;&lt;&lt;&lt;&lt;', 'congruency': 1, 'corResp': 'f', 'rt_other': 0.4, 'resp_other': 'rectsocial/r_left.jpg', 'acc_other': 1, 'rsi_time': None}, {'stim': 'Z', 'stimulus': '&gt;&gt;&gt;&gt;&gt;', 'congruency': 1, 'corResp': 'j', 'rt_other': 0.5, 'resp_other': 'rectsocial/r_right.jpg', 'acc_other': 1, 'rsi_time': None}, {'stim': 'ZZ', 'stimulus': '&lt;&lt;&gt;&lt;&lt;', 'congruency': 0, 'corResp': 'j', 'rt_other': 0.6, 'resp_other': 'rectsocial/r_right.jpg', 'acc_other': 1, 'rsi_time': None}, {'stim': 'ZZZ', 'stimulus': '&gt;&gt;&lt;&gt;&gt;', 'congruency': 0, 'corResp': 'f', 'rt_other': 0.7, 'resp_other': 'rectsocial/r_left.jpg', 'acc_other': 1, 'rsi_time': None}]" valType="str"/>
+      <Param name="conditionsFile" updates="None" val="var_excel.xlsx" valType="str"/>
+      <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
+      <Param name="isTrials" updates="None" val="True" valType="bool"/>
+      <Param name="loopType" updates="None" val="random" valType="str"/>
+      <Param name="nReps" updates="None" val="1" valType="code"/>
+      <Param name="name" updates="None" val="Trials_O1" valType="code"/>
+      <Param name="random seed" updates="None" val="" valType="code"/>
+    </LoopInitiator>
+    <Routine name="O"/>
+    <LoopTerminator name="Trials_O1"/>
+    <Routine name="RSI"/>
+    <LoopInitiator loopType="TrialHandler" name="Trials_P_2">
+      <Param name="Selected rows" updates="None" val="$random(1)*20" valType="str"/>
+      <Param name="conditions" updates="None" val="[{'stim': 'A', 'stimulus': '&lt;&lt;&lt;&lt;&lt;', 'congruency': 1, 'corResp': 'f', 'rt_other': 0.4, 'resp_other': 'rectsocial/r_left.jpg', 'acc_other': 1, 'rsi_time': None}, {'stim': 'B', 'stimulus': '&gt;&gt;&gt;&gt;&gt;', 'congruency': 1, 'corResp': 'j', 'rt_other': 0.5, 'resp_other': 'rectsocial/r_left.jpg', 'acc_other': 0, 'rsi_time': None}, {'stim': 'C', 'stimulus': '&lt;&lt;&gt;&lt;&lt;', 'congruency': 0, 'corResp': 'j', 'rt_other': 0.6, 'resp_other': 'rectsocial/r_right.jpg', 'acc_other': 1, 'rsi_time': None}, {'stim': 'D', 'stimulus': '&gt;&gt;&lt;&gt;&gt;', 'congruency': 0, 'corResp': 'f', 'rt_other': 0.7, 'resp_other': 'rectsocial/r_right.jpg', 'acc_other': 0, 'rsi_time': None}, {'stim': 'E', 'stimulus': '&lt;&lt;&lt;&lt;&lt;', 'congruency': 1, 'corResp': 'f', 'rt_other': 0.4, 'resp_other': 'rectsocial/r_left.jpg', 'acc_other': 1, 'rsi_time': None}, {'stim': 'F', 'stimulus': '&gt;&gt;&gt;&gt;&gt;', 'congruency': 1, 'corResp': 'j', 'rt_other': 0.5, 'resp_other': 'rectsocial/r_right.jpg', 'acc_other': 1, 'rsi_time': None}, {'stim': 'G', 'stimulus': '&lt;&lt;&gt;&lt;&lt;', 'congruency': 0, 'corResp': 'j', 'rt_other': 0.6, 'resp_other': 'rectsocial/r_left.jpg', 'acc_other': 0, 'rsi_time': None}, {'stim': 'H', 'stimulus': '&gt;&gt;&lt;&gt;&gt;', 'congruency': 0, 'corResp': 'f', 'rt_other': 0.7, 'resp_other': 'rectsocial/r_right.jpg', 'acc_other': 0, 'rsi_time': None}, {'stim': 'I', 'stimulus': '&lt;&lt;&lt;&lt;&lt;', 'congruency': 1, 'corResp': 'f', 'rt_other': 0.4, 'resp_other': 'rectsocial/r_left.jpg', 'acc_other': 1, 'rsi_time': None}, {'stim': 'J', 'stimulus': '&gt;&gt;&gt;&gt;&gt;', 'congruency': 1, 'corResp': 'j', 'rt_other': 0.5, 'resp_other': 'rectsocial/r_right.jpg', 'acc_other': 1, 'rsi_time': None}, {'stim': 'K', 'stimulus': '&lt;&lt;&gt;&lt;&lt;', 'congruency': 0, 'corResp': 'j', 'rt_other': 0.6, 'resp_other': 'rectsocial/r_right.jpg', 'acc_other': 1, 'rsi_time': None}, {'stim': 'L', 'stimulus': '&gt;&gt;&lt;&gt;&gt;', 'congruency': 0, 'corResp': 'f', 'rt_other': 0.7, 'resp_other': 'rectsocial/r_right.jpg', 'acc_other': 0, 'rsi_time': None}, {'stim': 'M', 'stimulus': '&lt;&lt;&lt;&lt;&lt;', 'congruency': 1, 'corResp': 'f', 'rt_other': 0.4, 'resp_other': 'rectsocial/r_left.jpg', 'acc_other': 1, 'rsi_time': None}, {'stim': 'N', 'stimulus': '&gt;&gt;&gt;&gt;&gt;', 'congruency': 1, 'corResp': 'j', 'rt_other': 0.5, 'resp_other': 'rectsocial/r_left.jpg', 'acc_other': 0, 'rsi_time': None}, {'stim': 'O', 'stimulus': '&lt;&lt;&gt;&lt;&lt;', 'congruency': 0, 'corResp': 'j', 'rt_other': 0.6, 'resp_other': 'rectsocial/r_right.jpg', 'acc_other': 1, 'rsi_time': None}, {'stim': 'P', 'stimulus': '&gt;&gt;&lt;&gt;&gt;', 'congruency': 0, 'corResp': 'f', 'rt_other': 0.7, 'resp_other': 'rectsocial/r_left.jpg', 'acc_other': 1, 'rsi_time': None}, {'stim': 'Q', 'stimulus': '&lt;&lt;&lt;&lt;&lt;', 'congruency': 1, 'corResp': 'f', 'rt_other': 0.4, 'resp_other': 'rectsocial/r_right.jpg', 'acc_other': 0, 'rsi_time': None}, {'stim': 'R', 'stimulus': '&gt;&gt;&gt;&gt;&gt;', 'congruency': 1, 'corResp': 'j', 'rt_other': 0.5, 'resp_other': 'rectsocial/r_right.jpg', 'acc_other': 1, 'rsi_time': None}, {'stim': 'S', 'stimulus': '&lt;&lt;&gt;&lt;&lt;', 'congruency': 0, 'corResp': 'j', 'rt_other': 0.6, 'resp_other': 'rectsocial/r_left.jpg', 'acc_other': 0, 'rsi_time': None}, {'stim': 'T', 'stimulus': '&gt;&gt;&lt;&gt;&gt;', 'congruency': 0, 'corResp': 'f', 'rt_other': 0.7, 'resp_other': 'rectsocial/r_left.jpg', 'acc_other': 1, 'rsi_time': None}, {'stim': 'U', 'stimulus': '&lt;&lt;&lt;&lt;&lt;', 'congruency': 1, 'corResp': 'f', 'rt_other': 0.4, 'resp_other': 'rectsocial/r_left.jpg', 'acc_other': 1, 'rsi_time': None}, {'stim': 'V', 'stimulus': '&gt;&gt;&gt;&gt;&gt;', 'congruency': 1, 'corResp': 'j', 'rt_other': 0.5, 'resp_other': 'rectsocial/r_right.jpg', 'acc_other': 1, 'rsi_time': None}, {'stim': 'W', 'stimulus': '&lt;&lt;&gt;&lt;&lt;', 'congruency': 0, 'corResp': 'j', 'rt_other': 0.6, 'resp_other': 'rectsocial/r_right.jpg', 'acc_other': 1, 'rsi_time': None}, {'stim': 'X', 'stimulus': '&gt;&gt;&lt;&gt;&gt;', 'congruency': 0, 'corResp': 'f', 'rt_other': 0.7, 'resp_other': 'rectsocial/r_left.jpg', 'acc_other': 1, 'rsi_time': None}, {'stim': 'Y', 'stimulus': '&lt;&lt;&lt;&lt;&lt;', 'congruency': 1, 'corResp': 'f', 'rt_other': 0.4, 'resp_other': 'rectsocial/r_left.jpg', 'acc_other': 1, 'rsi_time': None}, {'stim': 'Z', 'stimulus': '&gt;&gt;&gt;&gt;&gt;', 'congruency': 1, 'corResp': 'j', 'rt_other': 0.5, 'resp_other': 'rectsocial/r_right.jpg', 'acc_other': 1, 'rsi_time': None}, {'stim': 'ZZ', 'stimulus': '&lt;&lt;&gt;&lt;&lt;', 'congruency': 0, 'corResp': 'j', 'rt_other': 0.6, 'resp_other': 'rectsocial/r_right.jpg', 'acc_other': 1, 'rsi_time': None}, {'stim': 'ZZZ', 'stimulus': '&gt;&gt;&lt;&gt;&gt;', 'congruency': 0, 'corResp': 'f', 'rt_other': 0.7, 'resp_other': 'rectsocial/r_left.jpg', 'acc_other': 1, 'rsi_time': None}]" valType="str"/>
+      <Param name="conditionsFile" updates="None" val="var_excel.xlsx" valType="str"/>
+      <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
+      <Param name="isTrials" updates="None" val="True" valType="bool"/>
+      <Param name="loopType" updates="None" val="random" valType="str"/>
+      <Param name="nReps" updates="None" val="1" valType="code"/>
+      <Param name="name" updates="None" val="Trials_P_2" valType="code"/>
+      <Param name="random seed" updates="None" val="" valType="code"/>
+    </LoopInitiator>
+    <Routine name="P"/>
+    <LoopTerminator name="Trials_P_2"/>
+    <Routine name="RSI"/>
+    <LoopInitiator loopType="TrialHandler" name="Trials_P_3">
+      <Param name="Selected rows" updates="None" val="$random(1)*20" valType="str"/>
+      <Param name="conditions" updates="None" val="[{'stim': 'A', 'stimulus': '&lt;&lt;&lt;&lt;&lt;', 'congruency': 1, 'corResp': 'f', 'rt_other': 0.4, 'resp_other': 'rectsocial/r_left.jpg', 'acc_other': 1, 'rsi_time': None}, {'stim': 'B', 'stimulus': '&gt;&gt;&gt;&gt;&gt;', 'congruency': 1, 'corResp': 'j', 'rt_other': 0.5, 'resp_other': 'rectsocial/r_left.jpg', 'acc_other': 0, 'rsi_time': None}, {'stim': 'C', 'stimulus': '&lt;&lt;&gt;&lt;&lt;', 'congruency': 0, 'corResp': 'j', 'rt_other': 0.6, 'resp_other': 'rectsocial/r_right.jpg', 'acc_other': 1, 'rsi_time': None}, {'stim': 'D', 'stimulus': '&gt;&gt;&lt;&gt;&gt;', 'congruency': 0, 'corResp': 'f', 'rt_other': 0.7, 'resp_other': 'rectsocial/r_right.jpg', 'acc_other': 0, 'rsi_time': None}, {'stim': 'E', 'stimulus': '&lt;&lt;&lt;&lt;&lt;', 'congruency': 1, 'corResp': 'f', 'rt_other': 0.4, 'resp_other': 'rectsocial/r_left.jpg', 'acc_other': 1, 'rsi_time': None}, {'stim': 'F', 'stimulus': '&gt;&gt;&gt;&gt;&gt;', 'congruency': 1, 'corResp': 'j', 'rt_other': 0.5, 'resp_other': 'rectsocial/r_right.jpg', 'acc_other': 1, 'rsi_time': None}, {'stim': 'G', 'stimulus': '&lt;&lt;&gt;&lt;&lt;', 'congruency': 0, 'corResp': 'j', 'rt_other': 0.6, 'resp_other': 'rectsocial/r_left.jpg', 'acc_other': 0, 'rsi_time': None}, {'stim': 'H', 'stimulus': '&gt;&gt;&lt;&gt;&gt;', 'congruency': 0, 'corResp': 'f', 'rt_other': 0.7, 'resp_other': 'rectsocial/r_right.jpg', 'acc_other': 0, 'rsi_time': None}, {'stim': 'I', 'stimulus': '&lt;&lt;&lt;&lt;&lt;', 'congruency': 1, 'corResp': 'f', 'rt_other': 0.4, 'resp_other': 'rectsocial/r_left.jpg', 'acc_other': 1, 'rsi_time': None}, {'stim': 'J', 'stimulus': '&gt;&gt;&gt;&gt;&gt;', 'congruency': 1, 'corResp': 'j', 'rt_other': 0.5, 'resp_other': 'rectsocial/r_right.jpg', 'acc_other': 1, 'rsi_time': None}, {'stim': 'K', 'stimulus': '&lt;&lt;&gt;&lt;&lt;', 'congruency': 0, 'corResp': 'j', 'rt_other': 0.6, 'resp_other': 'rectsocial/r_right.jpg', 'acc_other': 1, 'rsi_time': None}, {'stim': 'L', 'stimulus': '&gt;&gt;&lt;&gt;&gt;', 'congruency': 0, 'corResp': 'f', 'rt_other': 0.7, 'resp_other': 'rectsocial/r_right.jpg', 'acc_other': 0, 'rsi_time': None}, {'stim': 'M', 'stimulus': '&lt;&lt;&lt;&lt;&lt;', 'congruency': 1, 'corResp': 'f', 'rt_other': 0.4, 'resp_other': 'rectsocial/r_left.jpg', 'acc_other': 1, 'rsi_time': None}, {'stim': 'N', 'stimulus': '&gt;&gt;&gt;&gt;&gt;', 'congruency': 1, 'corResp': 'j', 'rt_other': 0.5, 'resp_other': 'rectsocial/r_left.jpg', 'acc_other': 0, 'rsi_time': None}, {'stim': 'O', 'stimulus': '&lt;&lt;&gt;&lt;&lt;', 'congruency': 0, 'corResp': 'j', 'rt_other': 0.6, 'resp_other': 'rectsocial/r_right.jpg', 'acc_other': 1, 'rsi_time': None}, {'stim': 'P', 'stimulus': '&gt;&gt;&lt;&gt;&gt;', 'congruency': 0, 'corResp': 'f', 'rt_other': 0.7, 'resp_other': 'rectsocial/r_left.jpg', 'acc_other': 1, 'rsi_time': None}, {'stim': 'Q', 'stimulus': '&lt;&lt;&lt;&lt;&lt;', 'congruency': 1, 'corResp': 'f', 'rt_other': 0.4, 'resp_other': 'rectsocial/r_right.jpg', 'acc_other': 0, 'rsi_time': None}, {'stim': 'R', 'stimulus': '&gt;&gt;&gt;&gt;&gt;', 'congruency': 1, 'corResp': 'j', 'rt_other': 0.5, 'resp_other': 'rectsocial/r_right.jpg', 'acc_other': 1, 'rsi_time': None}, {'stim': 'S', 'stimulus': '&lt;&lt;&gt;&lt;&lt;', 'congruency': 0, 'corResp': 'j', 'rt_other': 0.6, 'resp_other': 'rectsocial/r_left.jpg', 'acc_other': 0, 'rsi_time': None}, {'stim': 'T', 'stimulus': '&gt;&gt;&lt;&gt;&gt;', 'congruency': 0, 'corResp': 'f', 'rt_other': 0.7, 'resp_other': 'rectsocial/r_left.jpg', 'acc_other': 1, 'rsi_time': None}, {'stim': 'U', 'stimulus': '&lt;&lt;&lt;&lt;&lt;', 'congruency': 1, 'corResp': 'f', 'rt_other': 0.4, 'resp_other': 'rectsocial/r_left.jpg', 'acc_other': 1, 'rsi_time': None}, {'stim': 'V', 'stimulus': '&gt;&gt;&gt;&gt;&gt;', 'congruency': 1, 'corResp': 'j', 'rt_other': 0.5, 'resp_other': 'rectsocial/r_right.jpg', 'acc_other': 1, 'rsi_time': None}, {'stim': 'W', 'stimulus': '&lt;&lt;&gt;&lt;&lt;', 'congruency': 0, 'corResp': 'j', 'rt_other': 0.6, 'resp_other': 'rectsocial/r_right.jpg', 'acc_other': 1, 'rsi_time': None}, {'stim': 'X', 'stimulus': '&gt;&gt;&lt;&gt;&gt;', 'congruency': 0, 'corResp': 'f', 'rt_other': 0.7, 'resp_other': 'rectsocial/r_left.jpg', 'acc_other': 1, 'rsi_time': None}, {'stim': 'Y', 'stimulus': '&lt;&lt;&lt;&lt;&lt;', 'congruency': 1, 'corResp': 'f', 'rt_other': 0.4, 'resp_other': 'rectsocial/r_left.jpg', 'acc_other': 1, 'rsi_time': None}, {'stim': 'Z', 'stimulus': '&gt;&gt;&gt;&gt;&gt;', 'congruency': 1, 'corResp': 'j', 'rt_other': 0.5, 'resp_other': 'rectsocial/r_right.jpg', 'acc_other': 1, 'rsi_time': None}, {'stim': 'ZZ', 'stimulus': '&lt;&lt;&gt;&lt;&lt;', 'congruency': 0, 'corResp': 'j', 'rt_other': 0.6, 'resp_other': 'rectsocial/r_right.jpg', 'acc_other': 1, 'rsi_time': None}, {'stim': 'ZZZ', 'stimulus': '&gt;&gt;&lt;&gt;&gt;', 'congruency': 0, 'corResp': 'f', 'rt_other': 0.7, 'resp_other': 'rectsocial/r_left.jpg', 'acc_other': 1, 'rsi_time': None}]" valType="str"/>
+      <Param name="conditionsFile" updates="None" val="var_excel.xlsx" valType="str"/>
+      <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
+      <Param name="isTrials" updates="None" val="True" valType="bool"/>
+      <Param name="loopType" updates="None" val="random" valType="str"/>
+      <Param name="nReps" updates="None" val="1" valType="code"/>
+      <Param name="name" updates="None" val="Trials_P_3" valType="code"/>
+      <Param name="random seed" updates="None" val="" valType="code"/>
+    </LoopInitiator>
+    <Routine name="P"/>
+    <LoopTerminator name="Trials_P_3"/>
+    <LoopTerminator name="OPP"/>
+    <Routine name="Error_estimation"/>
+    <Routine name="POP_instruct"/>
+    <LoopInitiator loopType="TrialHandler" name="POP">
+      <Param name="Selected rows" updates="None" val="" valType="str"/>
+      <Param name="conditions" updates="None" val="None" valType="str"/>
+      <Param name="conditionsFile" updates="None" val="" valType="str"/>
+      <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
+      <Param name="isTrials" updates="None" val="True" valType="bool"/>
+      <Param name="loopType" updates="None" val="random" valType="str"/>
+      <Param name="nReps" updates="None" val="1" valType="code"/>
+      <Param name="name" updates="None" val="POP" valType="code"/>
+      <Param name="random seed" updates="None" val="" valType="code"/>
+    </LoopInitiator>
+    <LoopInitiator loopType="TrialHandler" name="Trials_P_4">
+      <Param name="Selected rows" updates="None" val="$random(1)*20" valType="str"/>
+      <Param name="conditions" updates="None" val="[{'stim': 'A', 'stimulus': '&lt;&lt;&lt;&lt;&lt;', 'congruency': 1, 'corResp': 'f', 'rt_other': 0.4, 'resp_other': 'rectsocial/r_left.jpg', 'acc_other': 1, 'rsi_time': None}, {'stim': 'B', 'stimulus': '&gt;&gt;&gt;&gt;&gt;', 'congruency': 1, 'corResp': 'j', 'rt_other': 0.5, 'resp_other': 'rectsocial/r_left.jpg', 'acc_other': 0, 'rsi_time': None}, {'stim': 'C', 'stimulus': '&lt;&lt;&gt;&lt;&lt;', 'congruency': 0, 'corResp': 'j', 'rt_other': 0.6, 'resp_other': 'rectsocial/r_right.jpg', 'acc_other': 1, 'rsi_time': None}, {'stim': 'D', 'stimulus': '&gt;&gt;&lt;&gt;&gt;', 'congruency': 0, 'corResp': 'f', 'rt_other': 0.7, 'resp_other': 'rectsocial/r_right.jpg', 'acc_other': 0, 'rsi_time': None}, {'stim': 'E', 'stimulus': '&lt;&lt;&lt;&lt;&lt;', 'congruency': 1, 'corResp': 'f', 'rt_other': 0.4, 'resp_other': 'rectsocial/r_left.jpg', 'acc_other': 1, 'rsi_time': None}, {'stim': 'F', 'stimulus': '&gt;&gt;&gt;&gt;&gt;', 'congruency': 1, 'corResp': 'j', 'rt_other': 0.5, 'resp_other': 'rectsocial/r_right.jpg', 'acc_other': 1, 'rsi_time': None}, {'stim': 'G', 'stimulus': '&lt;&lt;&gt;&lt;&lt;', 'congruency': 0, 'corResp': 'j', 'rt_other': 0.6, 'resp_other': 'rectsocial/r_left.jpg', 'acc_other': 0, 'rsi_time': None}, {'stim': 'H', 'stimulus': '&gt;&gt;&lt;&gt;&gt;', 'congruency': 0, 'corResp': 'f', 'rt_other': 0.7, 'resp_other': 'rectsocial/r_right.jpg', 'acc_other': 0, 'rsi_time': None}, {'stim': 'I', 'stimulus': '&lt;&lt;&lt;&lt;&lt;', 'congruency': 1, 'corResp': 'f', 'rt_other': 0.4, 'resp_other': 'rectsocial/r_left.jpg', 'acc_other': 1, 'rsi_time': None}, {'stim': 'J', 'stimulus': '&gt;&gt;&gt;&gt;&gt;', 'congruency': 1, 'corResp': 'j', 'rt_other': 0.5, 'resp_other': 'rectsocial/r_right.jpg', 'acc_other': 1, 'rsi_time': None}, {'stim': 'K', 'stimulus': '&lt;&lt;&gt;&lt;&lt;', 'congruency': 0, 'corResp': 'j', 'rt_other': 0.6, 'resp_other': 'rectsocial/r_right.jpg', 'acc_other': 1, 'rsi_time': None}, {'stim': 'L', 'stimulus': '&gt;&gt;&lt;&gt;&gt;', 'congruency': 0, 'corResp': 'f', 'rt_other': 0.7, 'resp_other': 'rectsocial/r_right.jpg', 'acc_other': 0, 'rsi_time': None}, {'stim': 'M', 'stimulus': '&lt;&lt;&lt;&lt;&lt;', 'congruency': 1, 'corResp': 'f', 'rt_other': 0.4, 'resp_other': 'rectsocial/r_left.jpg', 'acc_other': 1, 'rsi_time': None}, {'stim': 'N', 'stimulus': '&gt;&gt;&gt;&gt;&gt;', 'congruency': 1, 'corResp': 'j', 'rt_other': 0.5, 'resp_other': 'rectsocial/r_left.jpg', 'acc_other': 0, 'rsi_time': None}, {'stim': 'O', 'stimulus': '&lt;&lt;&gt;&lt;&lt;', 'congruency': 0, 'corResp': 'j', 'rt_other': 0.6, 'resp_other': 'rectsocial/r_right.jpg', 'acc_other': 1, 'rsi_time': None}, {'stim': 'P', 'stimulus': '&gt;&gt;&lt;&gt;&gt;', 'congruency': 0, 'corResp': 'f', 'rt_other': 0.7, 'resp_other': 'rectsocial/r_left.jpg', 'acc_other': 1, 'rsi_time': None}, {'stim': 'Q', 'stimulus': '&lt;&lt;&lt;&lt;&lt;', 'congruency': 1, 'corResp': 'f', 'rt_other': 0.4, 'resp_other': 'rectsocial/r_right.jpg', 'acc_other': 0, 'rsi_time': None}, {'stim': 'R', 'stimulus': '&gt;&gt;&gt;&gt;&gt;', 'congruency': 1, 'corResp': 'j', 'rt_other': 0.5, 'resp_other': 'rectsocial/r_right.jpg', 'acc_other': 1, 'rsi_time': None}, {'stim': 'S', 'stimulus': '&lt;&lt;&gt;&lt;&lt;', 'congruency': 0, 'corResp': 'j', 'rt_other': 0.6, 'resp_other': 'rectsocial/r_left.jpg', 'acc_other': 0, 'rsi_time': None}, {'stim': 'T', 'stimulus': '&gt;&gt;&lt;&gt;&gt;', 'congruency': 0, 'corResp': 'f', 'rt_other': 0.7, 'resp_other': 'rectsocial/r_left.jpg', 'acc_other': 1, 'rsi_time': None}, {'stim': 'U', 'stimulus': '&lt;&lt;&lt;&lt;&lt;', 'congruency': 1, 'corResp': 'f', 'rt_other': 0.4, 'resp_other': 'rectsocial/r_left.jpg', 'acc_other': 1, 'rsi_time': None}, {'stim': 'V', 'stimulus': '&gt;&gt;&gt;&gt;&gt;', 'congruency': 1, 'corResp': 'j', 'rt_other': 0.5, 'resp_other': 'rectsocial/r_right.jpg', 'acc_other': 1, 'rsi_time': None}, {'stim': 'W', 'stimulus': '&lt;&lt;&gt;&lt;&lt;', 'congruency': 0, 'corResp': 'j', 'rt_other': 0.6, 'resp_other': 'rectsocial/r_right.jpg', 'acc_other': 1, 'rsi_time': None}, {'stim': 'X', 'stimulus': '&gt;&gt;&lt;&gt;&gt;', 'congruency': 0, 'corResp': 'f', 'rt_other': 0.7, 'resp_other': 'rectsocial/r_left.jpg', 'acc_other': 1, 'rsi_time': None}, {'stim': 'Y', 'stimulus': '&lt;&lt;&lt;&lt;&lt;', 'congruency': 1, 'corResp': 'f', 'rt_other': 0.4, 'resp_other': 'rectsocial/r_left.jpg', 'acc_other': 1, 'rsi_time': None}, {'stim': 'Z', 'stimulus': '&gt;&gt;&gt;&gt;&gt;', 'congruency': 1, 'corResp': 'j', 'rt_other': 0.5, 'resp_other': 'rectsocial/r_right.jpg', 'acc_other': 1, 'rsi_time': None}, {'stim': 'ZZ', 'stimulus': '&lt;&lt;&gt;&lt;&lt;', 'congruency': 0, 'corResp': 'j', 'rt_other': 0.6, 'resp_other': 'rectsocial/r_right.jpg', 'acc_other': 1, 'rsi_time': None}, {'stim': 'ZZZ', 'stimulus': '&gt;&gt;&lt;&gt;&gt;', 'congruency': 0, 'corResp': 'f', 'rt_other': 0.7, 'resp_other': 'rectsocial/r_left.jpg', 'acc_other': 1, 'rsi_time': None}]" valType="str"/>
+      <Param name="conditionsFile" updates="None" val="var_excel.xlsx" valType="str"/>
+      <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
+      <Param name="isTrials" updates="None" val="True" valType="bool"/>
+      <Param name="loopType" updates="None" val="random" valType="str"/>
+      <Param name="nReps" updates="None" val="1" valType="code"/>
+      <Param name="name" updates="None" val="Trials_P_4" valType="code"/>
+      <Param name="random seed" updates="None" val="" valType="code"/>
+    </LoopInitiator>
+    <Routine name="P"/>
+    <LoopTerminator name="Trials_P_4"/>
+    <Routine name="RSI"/>
+    <LoopInitiator loopType="TrialHandler" name="Trials_O_5">
+      <Param name="Selected rows" updates="None" val="$random(1)*20" valType="str"/>
+      <Param name="conditions" updates="None" val="[{'stim': 'A', 'stimulus': '&lt;&lt;&lt;&lt;&lt;', 'congruency': 1, 'corResp': 'f', 'rt_other': 0.4, 'resp_other': 'rectsocial/r_left.jpg', 'acc_other': 1, 'rsi_time': None}, {'stim': 'B', 'stimulus': '&gt;&gt;&gt;&gt;&gt;', 'congruency': 1, 'corResp': 'j', 'rt_other': 0.5, 'resp_other': 'rectsocial/r_left.jpg', 'acc_other': 0, 'rsi_time': None}, {'stim': 'C', 'stimulus': '&lt;&lt;&gt;&lt;&lt;', 'congruency': 0, 'corResp': 'j', 'rt_other': 0.6, 'resp_other': 'rectsocial/r_right.jpg', 'acc_other': 1, 'rsi_time': None}, {'stim': 'D', 'stimulus': '&gt;&gt;&lt;&gt;&gt;', 'congruency': 0, 'corResp': 'f', 'rt_other': 0.7, 'resp_other': 'rectsocial/r_right.jpg', 'acc_other': 0, 'rsi_time': None}, {'stim': 'E', 'stimulus': '&lt;&lt;&lt;&lt;&lt;', 'congruency': 1, 'corResp': 'f', 'rt_other': 0.4, 'resp_other': 'rectsocial/r_left.jpg', 'acc_other': 1, 'rsi_time': None}, {'stim': 'F', 'stimulus': '&gt;&gt;&gt;&gt;&gt;', 'congruency': 1, 'corResp': 'j', 'rt_other': 0.5, 'resp_other': 'rectsocial/r_right.jpg', 'acc_other': 1, 'rsi_time': None}, {'stim': 'G', 'stimulus': '&lt;&lt;&gt;&lt;&lt;', 'congruency': 0, 'corResp': 'j', 'rt_other': 0.6, 'resp_other': 'rectsocial/r_left.jpg', 'acc_other': 0, 'rsi_time': None}, {'stim': 'H', 'stimulus': '&gt;&gt;&lt;&gt;&gt;', 'congruency': 0, 'corResp': 'f', 'rt_other': 0.7, 'resp_other': 'rectsocial/r_right.jpg', 'acc_other': 0, 'rsi_time': None}, {'stim': 'I', 'stimulus': '&lt;&lt;&lt;&lt;&lt;', 'congruency': 1, 'corResp': 'f', 'rt_other': 0.4, 'resp_other': 'rectsocial/r_left.jpg', 'acc_other': 1, 'rsi_time': None}, {'stim': 'J', 'stimulus': '&gt;&gt;&gt;&gt;&gt;', 'congruency': 1, 'corResp': 'j', 'rt_other': 0.5, 'resp_other': 'rectsocial/r_right.jpg', 'acc_other': 1, 'rsi_time': None}, {'stim': 'K', 'stimulus': '&lt;&lt;&gt;&lt;&lt;', 'congruency': 0, 'corResp': 'j', 'rt_other': 0.6, 'resp_other': 'rectsocial/r_right.jpg', 'acc_other': 1, 'rsi_time': None}, {'stim': 'L', 'stimulus': '&gt;&gt;&lt;&gt;&gt;', 'congruency': 0, 'corResp': 'f', 'rt_other': 0.7, 'resp_other': 'rectsocial/r_right.jpg', 'acc_other': 0, 'rsi_time': None}, {'stim': 'M', 'stimulus': '&lt;&lt;&lt;&lt;&lt;', 'congruency': 1, 'corResp': 'f', 'rt_other': 0.4, 'resp_other': 'rectsocial/r_left.jpg', 'acc_other': 1, 'rsi_time': None}, {'stim': 'N', 'stimulus': '&gt;&gt;&gt;&gt;&gt;', 'congruency': 1, 'corResp': 'j', 'rt_other': 0.5, 'resp_other': 'rectsocial/r_left.jpg', 'acc_other': 0, 'rsi_time': None}, {'stim': 'O', 'stimulus': '&lt;&lt;&gt;&lt;&lt;', 'congruency': 0, 'corResp': 'j', 'rt_other': 0.6, 'resp_other': 'rectsocial/r_right.jpg', 'acc_other': 1, 'rsi_time': None}, {'stim': 'P', 'stimulus': '&gt;&gt;&lt;&gt;&gt;', 'congruency': 0, 'corResp': 'f', 'rt_other': 0.7, 'resp_other': 'rectsocial/r_left.jpg', 'acc_other': 1, 'rsi_time': None}, {'stim': 'Q', 'stimulus': '&lt;&lt;&lt;&lt;&lt;', 'congruency': 1, 'corResp': 'f', 'rt_other': 0.4, 'resp_other': 'rectsocial/r_right.jpg', 'acc_other': 0, 'rsi_time': None}, {'stim': 'R', 'stimulus': '&gt;&gt;&gt;&gt;&gt;', 'congruency': 1, 'corResp': 'j', 'rt_other': 0.5, 'resp_other': 'rectsocial/r_right.jpg', 'acc_other': 1, 'rsi_time': None}, {'stim': 'S', 'stimulus': '&lt;&lt;&gt;&lt;&lt;', 'congruency': 0, 'corResp': 'j', 'rt_other': 0.6, 'resp_other': 'rectsocial/r_left.jpg', 'acc_other': 0, 'rsi_time': None}, {'stim': 'T', 'stimulus': '&gt;&gt;&lt;&gt;&gt;', 'congruency': 0, 'corResp': 'f', 'rt_other': 0.7, 'resp_other': 'rectsocial/r_left.jpg', 'acc_other': 1, 'rsi_time': None}, {'stim': 'U', 'stimulus': '&lt;&lt;&lt;&lt;&lt;', 'congruency': 1, 'corResp': 'f', 'rt_other': 0.4, 'resp_other': 'rectsocial/r_left.jpg', 'acc_other': 1, 'rsi_time': None}, {'stim': 'V', 'stimulus': '&gt;&gt;&gt;&gt;&gt;', 'congruency': 1, 'corResp': 'j', 'rt_other': 0.5, 'resp_other': 'rectsocial/r_right.jpg', 'acc_other': 1, 'rsi_time': None}, {'stim': 'W', 'stimulus': '&lt;&lt;&gt;&lt;&lt;', 'congruency': 0, 'corResp': 'j', 'rt_other': 0.6, 'resp_other': 'rectsocial/r_right.jpg', 'acc_other': 1, 'rsi_time': None}, {'stim': 'X', 'stimulus': '&gt;&gt;&lt;&gt;&gt;', 'congruency': 0, 'corResp': 'f', 'rt_other': 0.7, 'resp_other': 'rectsocial/r_left.jpg', 'acc_other': 1, 'rsi_time': None}, {'stim': 'Y', 'stimulus': '&lt;&lt;&lt;&lt;&lt;', 'congruency': 1, 'corResp': 'f', 'rt_other': 0.4, 'resp_other': 'rectsocial/r_left.jpg', 'acc_other': 1, 'rsi_time': None}, {'stim': 'Z', 'stimulus': '&gt;&gt;&gt;&gt;&gt;', 'congruency': 1, 'corResp': 'j', 'rt_other': 0.5, 'resp_other': 'rectsocial/r_right.jpg', 'acc_other': 1, 'rsi_time': None}, {'stim': 'ZZ', 'stimulus': '&lt;&lt;&gt;&lt;&lt;', 'congruency': 0, 'corResp': 'j', 'rt_other': 0.6, 'resp_other': 'rectsocial/r_right.jpg', 'acc_other': 1, 'rsi_time': None}, {'stim': 'ZZZ', 'stimulus': '&gt;&gt;&lt;&gt;&gt;', 'congruency': 0, 'corResp': 'f', 'rt_other': 0.7, 'resp_other': 'rectsocial/r_left.jpg', 'acc_other': 1, 'rsi_time': None}]" valType="str"/>
+      <Param name="conditionsFile" updates="None" val="var_excel.xlsx" valType="str"/>
+      <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
+      <Param name="isTrials" updates="None" val="True" valType="bool"/>
+      <Param name="loopType" updates="None" val="random" valType="str"/>
+      <Param name="nReps" updates="None" val="1" valType="code"/>
+      <Param name="name" updates="None" val="Trials_O_5" valType="code"/>
+      <Param name="random seed" updates="None" val="" valType="code"/>
+    </LoopInitiator>
+    <Routine name="O"/>
+    <LoopTerminator name="Trials_O_5"/>
+    <Routine name="RSI"/>
+    <LoopInitiator loopType="TrialHandler" name="Trials_P_6">
+      <Param name="Selected rows" updates="None" val="$random(1)*20" valType="str"/>
+      <Param name="conditions" updates="None" val="[{'stim': 'A', 'stimulus': '&lt;&lt;&lt;&lt;&lt;', 'congruency': 1, 'corResp': 'f', 'rt_other': 0.4, 'resp_other': 'rectsocial/r_left.jpg', 'acc_other': 1, 'rsi_time': None}, {'stim': 'B', 'stimulus': '&gt;&gt;&gt;&gt;&gt;', 'congruency': 1, 'corResp': 'j', 'rt_other': 0.5, 'resp_other': 'rectsocial/r_left.jpg', 'acc_other': 0, 'rsi_time': None}, {'stim': 'C', 'stimulus': '&lt;&lt;&gt;&lt;&lt;', 'congruency': 0, 'corResp': 'j', 'rt_other': 0.6, 'resp_other': 'rectsocial/r_right.jpg', 'acc_other': 1, 'rsi_time': None}, {'stim': 'D', 'stimulus': '&gt;&gt;&lt;&gt;&gt;', 'congruency': 0, 'corResp': 'f', 'rt_other': 0.7, 'resp_other': 'rectsocial/r_right.jpg', 'acc_other': 0, 'rsi_time': None}, {'stim': 'E', 'stimulus': '&lt;&lt;&lt;&lt;&lt;', 'congruency': 1, 'corResp': 'f', 'rt_other': 0.4, 'resp_other': 'rectsocial/r_left.jpg', 'acc_other': 1, 'rsi_time': None}, {'stim': 'F', 'stimulus': '&gt;&gt;&gt;&gt;&gt;', 'congruency': 1, 'corResp': 'j', 'rt_other': 0.5, 'resp_other': 'rectsocial/r_right.jpg', 'acc_other': 1, 'rsi_time': None}, {'stim': 'G', 'stimulus': '&lt;&lt;&gt;&lt;&lt;', 'congruency': 0, 'corResp': 'j', 'rt_other': 0.6, 'resp_other': 'rectsocial/r_left.jpg', 'acc_other': 0, 'rsi_time': None}, {'stim': 'H', 'stimulus': '&gt;&gt;&lt;&gt;&gt;', 'congruency': 0, 'corResp': 'f', 'rt_other': 0.7, 'resp_other': 'rectsocial/r_right.jpg', 'acc_other': 0, 'rsi_time': None}, {'stim': 'I', 'stimulus': '&lt;&lt;&lt;&lt;&lt;', 'congruency': 1, 'corResp': 'f', 'rt_other': 0.4, 'resp_other': 'rectsocial/r_left.jpg', 'acc_other': 1, 'rsi_time': None}, {'stim': 'J', 'stimulus': '&gt;&gt;&gt;&gt;&gt;', 'congruency': 1, 'corResp': 'j', 'rt_other': 0.5, 'resp_other': 'rectsocial/r_right.jpg', 'acc_other': 1, 'rsi_time': None}, {'stim': 'K', 'stimulus': '&lt;&lt;&gt;&lt;&lt;', 'congruency': 0, 'corResp': 'j', 'rt_other': 0.6, 'resp_other': 'rectsocial/r_right.jpg', 'acc_other': 1, 'rsi_time': None}, {'stim': 'L', 'stimulus': '&gt;&gt;&lt;&gt;&gt;', 'congruency': 0, 'corResp': 'f', 'rt_other': 0.7, 'resp_other': 'rectsocial/r_right.jpg', 'acc_other': 0, 'rsi_time': None}, {'stim': 'M', 'stimulus': '&lt;&lt;&lt;&lt;&lt;', 'congruency': 1, 'corResp': 'f', 'rt_other': 0.4, 'resp_other': 'rectsocial/r_left.jpg', 'acc_other': 1, 'rsi_time': None}, {'stim': 'N', 'stimulus': '&gt;&gt;&gt;&gt;&gt;', 'congruency': 1, 'corResp': 'j', 'rt_other': 0.5, 'resp_other': 'rectsocial/r_left.jpg', 'acc_other': 0, 'rsi_time': None}, {'stim': 'O', 'stimulus': '&lt;&lt;&gt;&lt;&lt;', 'congruency': 0, 'corResp': 'j', 'rt_other': 0.6, 'resp_other': 'rectsocial/r_right.jpg', 'acc_other': 1, 'rsi_time': None}, {'stim': 'P', 'stimulus': '&gt;&gt;&lt;&gt;&gt;', 'congruency': 0, 'corResp': 'f', 'rt_other': 0.7, 'resp_other': 'rectsocial/r_left.jpg', 'acc_other': 1, 'rsi_time': None}, {'stim': 'Q', 'stimulus': '&lt;&lt;&lt;&lt;&lt;', 'congruency': 1, 'corResp': 'f', 'rt_other': 0.4, 'resp_other': 'rectsocial/r_right.jpg', 'acc_other': 0, 'rsi_time': None}, {'stim': 'R', 'stimulus': '&gt;&gt;&gt;&gt;&gt;', 'congruency': 1, 'corResp': 'j', 'rt_other': 0.5, 'resp_other': 'rectsocial/r_right.jpg', 'acc_other': 1, 'rsi_time': None}, {'stim': 'S', 'stimulus': '&lt;&lt;&gt;&lt;&lt;', 'congruency': 0, 'corResp': 'j', 'rt_other': 0.6, 'resp_other': 'rectsocial/r_left.jpg', 'acc_other': 0, 'rsi_time': None}, {'stim': 'T', 'stimulus': '&gt;&gt;&lt;&gt;&gt;', 'congruency': 0, 'corResp': 'f', 'rt_other': 0.7, 'resp_other': 'rectsocial/r_left.jpg', 'acc_other': 1, 'rsi_time': None}, {'stim': 'U', 'stimulus': '&lt;&lt;&lt;&lt;&lt;', 'congruency': 1, 'corResp': 'f', 'rt_other': 0.4, 'resp_other': 'rectsocial/r_left.jpg', 'acc_other': 1, 'rsi_time': None}, {'stim': 'V', 'stimulus': '&gt;&gt;&gt;&gt;&gt;', 'congruency': 1, 'corResp': 'j', 'rt_other': 0.5, 'resp_other': 'rectsocial/r_right.jpg', 'acc_other': 1, 'rsi_time': None}, {'stim': 'W', 'stimulus': '&lt;&lt;&gt;&lt;&lt;', 'congruency': 0, 'corResp': 'j', 'rt_other': 0.6, 'resp_other': 'rectsocial/r_right.jpg', 'acc_other': 1, 'rsi_time': None}, {'stim': 'X', 'stimulus': '&gt;&gt;&lt;&gt;&gt;', 'congruency': 0, 'corResp': 'f', 'rt_other': 0.7, 'resp_other': 'rectsocial/r_left.jpg', 'acc_other': 1, 'rsi_time': None}, {'stim': 'Y', 'stimulus': '&lt;&lt;&lt;&lt;&lt;', 'congruency': 1, 'corResp': 'f', 'rt_other': 0.4, 'resp_other': 'rectsocial/r_left.jpg', 'acc_other': 1, 'rsi_time': None}, {'stim': 'Z', 'stimulus': '&gt;&gt;&gt;&gt;&gt;', 'congruency': 1, 'corResp': 'j', 'rt_other': 0.5, 'resp_other': 'rectsocial/r_right.jpg', 'acc_other': 1, 'rsi_time': None}, {'stim': 'ZZ', 'stimulus': '&lt;&lt;&gt;&lt;&lt;', 'congruency': 0, 'corResp': 'j', 'rt_other': 0.6, 'resp_other': 'rectsocial/r_right.jpg', 'acc_other': 1, 'rsi_time': None}, {'stim': 'ZZZ', 'stimulus': '&gt;&gt;&lt;&gt;&gt;', 'congruency': 0, 'corResp': 'f', 'rt_other': 0.7, 'resp_other': 'rectsocial/r_left.jpg', 'acc_other': 1, 'rsi_time': None}]" valType="str"/>
+      <Param name="conditionsFile" updates="None" val="var_excel.xlsx" valType="str"/>
+      <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
+      <Param name="isTrials" updates="None" val="True" valType="bool"/>
+      <Param name="loopType" updates="None" val="random" valType="str"/>
+      <Param name="nReps" updates="None" val="1" valType="code"/>
+      <Param name="name" updates="None" val="Trials_P_6" valType="code"/>
+      <Param name="random seed" updates="None" val="" valType="code"/>
+    </LoopInitiator>
+    <Routine name="P"/>
+    <LoopTerminator name="Trials_P_6"/>
+    <LoopTerminator name="POP"/>
+    <Routine name="Error_estimation"/>
+    <LoopTerminator name="Block"/>
+    <Routine name="Goodbye"/>
+  </Flow>
+</PsychoPy2experiment>

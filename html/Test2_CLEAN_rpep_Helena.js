@@ -1,4 +1,4 @@
-﻿/******************************** 
+/******************************** 
  * Test2_Clean_Rpep_Helena Test *
  ********************************/
 
@@ -44,6 +44,9 @@ psychoJS.scheduleCondition(function() { return (psychoJS.gui.dialogComponent.but
 // flowScheduler gets run if the participants presses OK
 flowScheduler.add(updateInfo); // add timeStamp
 flowScheduler.add(experimentInit);
+flowScheduler.add(WelcomeRoutineBegin());
+flowScheduler.add(WelcomeRoutineEachFrame());
+flowScheduler.add(WelcomeRoutineEnd());
 flowScheduler.add(General_InstructionRoutineBegin());
 flowScheduler.add(General_InstructionRoutineEachFrame());
 flowScheduler.add(General_InstructionRoutineEnd());
@@ -67,7 +70,7 @@ psychoJS.start({
   expInfo: expInfo,
   });
 
-psychoJS.experimentLogger.setLevel(core.Logger.ServerLevel.EXP);
+psychoJS.experimentLogger.setLevel(core.Logger.ServerLevel.DEBUG);
 
 
 var frameDur;
@@ -92,6 +95,9 @@ function updateInfo() {
 }
 
 
+var WelcomeClock;
+var welcome_txt;
+var welcome_key;
 var General_InstructionClock;
 var general_instruct_txt;
 var general_instruct_key;
@@ -111,7 +117,7 @@ var Key_resp_P;
 var txt_P;
 var Error_estimationClock;
 var error_est_txt;
-var slider;
+var error_est_key;
 var POP_instructClock;
 var pop_instruct_txt;
 var pop_instruct_key;
@@ -119,15 +125,30 @@ var GoodbyeClock;
 var globalClock;
 var routineTimer;
 function experimentInit() {
+  // Initialize components for Routine "Welcome"
+  WelcomeClock = new util.Clock();
+  welcome_txt = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'welcome_txt',
+    text: 'Hello and welcome.\n\nYou are taking part in a task interaction experiment with another participant. You will both do the same task which will be given in a sequence of 3 trials.\nBefore the task, instructions will be given to either respond yourself or to observe how the other particpant responded. \n\nThe goal is to keep track of the errors of the other participant. After every 3 trials, you have to point out if the other participant made a mistake or not.\n\nSince this is an online experiment, you will be interacting with a previous participant. This means that you will interact with the other person by his/hers stored data. \n\nPress the spacebar to go continue.\n',
+    font: 'Arial',
+    units: 'norm', 
+    pos: [0, 0], height: 0.064,  wrapWidth: undefined, ori: 0,
+    color: new util.Color('white'),  opacity: 1,
+    depth: 0.0 
+  });
+  
+  welcome_key = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
+  
   // Initialize components for Routine "General_Instruction"
   General_InstructionClock = new util.Clock();
   general_instruct_txt = new visual.TextStim({
     win: psychoJS.window,
     name: 'general_instruct_txt',
-    text: '- General instructions experiment here -\n\npress space bar\n',
+    text: 'You will see a row of five arrowheads next to eachother like this: \n<<<<< \n\nFocus on the arrowhead in the middle:\n- PRESS ‘ f ‘ on the keyboard when middle arrowhead is pointed to the LEFT\n\n- PRESS ‘ j ‘ on the keyboard when middle arrowhead is pointed to the RIGHT\n\nThe arrowheads around the middle one can have another direction like this: \n<<><<\n\nOnly respond to the direction of the arrowhead in the middle \n(in this case: right —>  press ‘j’).  Ignore the arrowheads around it. \n\nAnswer as fast as possible!\nIf you understand these instructions, press the spacebar to continue. \n',
     font: 'Arial',
-    units: undefined, 
-    pos: [0, 0], height: 0.1,  wrapWidth: undefined, ori: 0,
+    units: 'norm', 
+    pos: [0, 0], height: 0.064,  wrapWidth: undefined, ori: 0,
     color: new util.Color('white'),  opacity: 1,
     depth: 0.0 
   });
@@ -261,7 +282,7 @@ function experimentInit() {
   error_est_txt = new visual.TextStim({
     win: psychoJS.window,
     name: 'error_est_txt',
-    text: '\nHow many errors did the other participant make?\n\n',
+    text: '\nHow many errors did the other participant make?\n\n0 = press ‘a’ on keyboard\n1 = press ‘p’ on keyboard\n\n\n',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0], height: 0.1,  wrapWidth: undefined, ori: 0,
@@ -269,15 +290,7 @@ function experimentInit() {
     depth: 0.0 
   });
   
-  slider = new visual.Slider({
-    win: psychoJS.window, name: 'slider',
-    size: [1.0, 0.1], pos: [0, (- 0.6)], units: 'use prefs',
-    labels: undefined, ticks: [1, 2],
-    granularity: 0.0, style: ["RATING"],
-    color: new util.Color('LightGray'), 
-    fontFamily: 'Open Sans', bold: true, italic: false, depth: -1, 
-    flip: false,
-  });
+  error_est_key = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
   
   // Initialize components for Routine "POP_instruct"
   POP_instructClock = new util.Clock();
@@ -404,7 +417,7 @@ function experimentInit() {
   error_est_txt = new visual.TextStim({
     win: psychoJS.window,
     name: 'error_est_txt',
-    text: '\nHow many errors did the other participant make?\n\n',
+    text: '\nHow many errors did the other participant make?\n\n0 = press ‘a’ on keyboard\n1 = press ‘p’ on keyboard\n\n\n',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0], height: 0.1,  wrapWidth: undefined, ori: 0,
@@ -412,15 +425,7 @@ function experimentInit() {
     depth: 0.0 
   });
   
-  slider = new visual.Slider({
-    win: psychoJS.window, name: 'slider',
-    size: [1.0, 0.1], pos: [0, (- 0.6)], units: 'use prefs',
-    labels: undefined, ticks: [1, 2],
-    granularity: 0.0, style: ["RATING"],
-    color: new util.Color('LightGray'), 
-    fontFamily: 'Open Sans', bold: true, italic: false, depth: -1, 
-    flip: false,
-  });
+  error_est_key = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
   
   // Initialize components for Routine "Goodbye"
   GoodbyeClock = new util.Clock();
@@ -435,6 +440,123 @@ function experimentInit() {
 var t;
 var frameN;
 var continueRoutine;
+var _welcome_key_allKeys;
+var WelcomeComponents;
+function WelcomeRoutineBegin(snapshot) {
+  return function () {
+    //------Prepare to start Routine 'Welcome'-------
+    t = 0;
+    WelcomeClock.reset(); // clock
+    frameN = -1;
+    continueRoutine = true; // until we're told otherwise
+    // update component parameters for each repeat
+    welcome_key.keys = undefined;
+    welcome_key.rt = undefined;
+    _welcome_key_allKeys = [];
+    // keep track of which components have finished
+    WelcomeComponents = [];
+    WelcomeComponents.push(welcome_txt);
+    WelcomeComponents.push(welcome_key);
+    
+    for (const thisComponent of WelcomeComponents)
+      if ('status' in thisComponent)
+        thisComponent.status = PsychoJS.Status.NOT_STARTED;
+    return Scheduler.Event.NEXT;
+  }
+}
+
+
+function WelcomeRoutineEachFrame(snapshot) {
+  return function () {
+    //------Loop for each frame of Routine 'Welcome'-------
+    // get current time
+    t = WelcomeClock.getTime();
+    frameN = frameN + 1;// number of completed frames (so 0 is the first frame)
+    // update/draw components on each frame
+    
+    // *welcome_txt* updates
+    if (t >= 0.0 && welcome_txt.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      welcome_txt.tStart = t;  // (not accounting for frame time here)
+      welcome_txt.frameNStart = frameN;  // exact frame index
+      
+      welcome_txt.setAutoDraw(true);
+    }
+
+    
+    // *welcome_key* updates
+    if (t >= 0.0 && welcome_key.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      welcome_key.tStart = t;  // (not accounting for frame time here)
+      welcome_key.frameNStart = frameN;  // exact frame index
+      
+      // keyboard checking is just starting
+      psychoJS.window.callOnFlip(function() { welcome_key.clock.reset(); });  // t=0 on next screen flip
+      psychoJS.window.callOnFlip(function() { welcome_key.start(); }); // start on screen flip
+      psychoJS.window.callOnFlip(function() { welcome_key.clearEvents(); });
+    }
+
+    if (welcome_key.status === PsychoJS.Status.STARTED) {
+      let theseKeys = welcome_key.getKeys({keyList: ['space'], waitRelease: false});
+      _welcome_key_allKeys = _welcome_key_allKeys.concat(theseKeys);
+      if (_welcome_key_allKeys.length > 0) {
+        welcome_key.keys = _welcome_key_allKeys[_welcome_key_allKeys.length - 1].name;  // just the last key pressed
+        welcome_key.rt = _welcome_key_allKeys[_welcome_key_allKeys.length - 1].rt;
+        // a response ends the routine
+        continueRoutine = false;
+      }
+    }
+    
+    // check for quit (typically the Esc key)
+    if (psychoJS.experiment.experimentEnded || psychoJS.eventManager.getKeys({keyList:['escape']}).length > 0) {
+      return quitPsychoJS('The [Escape] key was pressed. Goodbye!', false);
+    }
+    
+    // check if the Routine should terminate
+    if (!continueRoutine) {  // a component has requested a forced-end of Routine
+      return Scheduler.Event.NEXT;
+    }
+    
+    continueRoutine = false;  // reverts to True if at least one component still running
+    for (const thisComponent of WelcomeComponents)
+      if ('status' in thisComponent && thisComponent.status !== PsychoJS.Status.FINISHED) {
+        continueRoutine = true;
+        break;
+      }
+    
+    // refresh the screen if continuing
+    if (continueRoutine) {
+      return Scheduler.Event.FLIP_REPEAT;
+    } else {
+      return Scheduler.Event.NEXT;
+    }
+  };
+}
+
+
+function WelcomeRoutineEnd(snapshot) {
+  return function () {
+    //------Ending Routine 'Welcome'-------
+    for (const thisComponent of WelcomeComponents) {
+      if (typeof thisComponent.setAutoDraw === 'function') {
+        thisComponent.setAutoDraw(false);
+      }
+    }
+    psychoJS.experiment.addData('welcome_key.keys', welcome_key.keys);
+    if (typeof welcome_key.keys !== 'undefined') {  // we had a response
+        psychoJS.experiment.addData('welcome_key.rt', welcome_key.rt);
+        routineTimer.reset();
+        }
+    
+    welcome_key.stop();
+    // the Routine "Welcome" was not non-slip safe, so reset the non-slip timer
+    routineTimer.reset();
+    
+    return Scheduler.Event.NEXT;
+  };
+}
+
+
 var _general_instruct_key_allKeys;
 var General_InstructionComponents;
 function General_InstructionRoutineBegin(snapshot) {
@@ -1435,6 +1557,7 @@ function PRoutineEnd(snapshot) {
 }
 
 
+var _error_est_key_allKeys;
 var Error_estimationComponents;
 function Error_estimationRoutineBegin(snapshot) {
   return function () {
@@ -1444,11 +1567,13 @@ function Error_estimationRoutineBegin(snapshot) {
     frameN = -1;
     continueRoutine = true; // until we're told otherwise
     // update component parameters for each repeat
-    slider.reset()
+    error_est_key.keys = undefined;
+    error_est_key.rt = undefined;
+    _error_est_key_allKeys = [];
     // keep track of which components have finished
     Error_estimationComponents = [];
     Error_estimationComponents.push(error_est_txt);
-    Error_estimationComponents.push(slider);
+    Error_estimationComponents.push(error_est_key);
     
     for (const thisComponent of Error_estimationComponents)
       if ('status' in thisComponent)
@@ -1476,19 +1601,29 @@ function Error_estimationRoutineEachFrame(snapshot) {
     }
 
     
-    // *slider* updates
-    if (t >= 0.0 && slider.status === PsychoJS.Status.NOT_STARTED) {
+    // *error_est_key* updates
+    if (t >= 0.0 && error_est_key.status === PsychoJS.Status.NOT_STARTED) {
       // keep track of start time/frame for later
-      slider.tStart = t;  // (not accounting for frame time here)
-      slider.frameNStart = frameN;  // exact frame index
+      error_est_key.tStart = t;  // (not accounting for frame time here)
+      error_est_key.frameNStart = frameN;  // exact frame index
       
-      slider.setAutoDraw(true);
+      // keyboard checking is just starting
+      psychoJS.window.callOnFlip(function() { error_est_key.clock.reset(); });  // t=0 on next screen flip
+      psychoJS.window.callOnFlip(function() { error_est_key.start(); }); // start on screen flip
+      psychoJS.window.callOnFlip(function() { error_est_key.clearEvents(); });
     }
 
+    if (error_est_key.status === PsychoJS.Status.STARTED) {
+      let theseKeys = error_est_key.getKeys({keyList: ['a', 'z'], waitRelease: false});
+      _error_est_key_allKeys = _error_est_key_allKeys.concat(theseKeys);
+      if (_error_est_key_allKeys.length > 0) {
+        error_est_key.keys = _error_est_key_allKeys[_error_est_key_allKeys.length - 1].name;  // just the last key pressed
+        error_est_key.rt = _error_est_key_allKeys[_error_est_key_allKeys.length - 1].rt;
+        // a response ends the routine
+        continueRoutine = false;
+      }
+    }
     
-    // Check slider for response to end routine
-    if (slider.getRating() !== undefined && slider.status === PsychoJS.Status.STARTED) {
-      continueRoutine = false; }
     // check for quit (typically the Esc key)
     if (psychoJS.experiment.experimentEnded || psychoJS.eventManager.getKeys({keyList:['escape']}).length > 0) {
       return quitPsychoJS('The [Escape] key was pressed. Goodbye!', false);
@@ -1524,8 +1659,13 @@ function Error_estimationRoutineEnd(snapshot) {
         thisComponent.setAutoDraw(false);
       }
     }
-    psychoJS.experiment.addData('slider.response', slider.getRating());
-    psychoJS.experiment.addData('slider.rt', slider.getRT());
+    psychoJS.experiment.addData('error_est_key.keys', error_est_key.keys);
+    if (typeof error_est_key.keys !== 'undefined') {  // we had a response
+        psychoJS.experiment.addData('error_est_key.rt', error_est_key.rt);
+        routineTimer.reset();
+        }
+    
+    error_est_key.stop();
     // the Routine "Error_estimation" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset();
     

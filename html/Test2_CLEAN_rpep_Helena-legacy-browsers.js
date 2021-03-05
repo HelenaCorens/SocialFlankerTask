@@ -10,7 +10,7 @@ const psychoJS = new PsychoJS({
 // open window:
 psychoJS.openWindow({
   fullscr: true,
-  color: new util.Color([0, 0, 0]),
+  color: new util.Color('[0,0,0]'),
   units: 'height',
   waitBlanking: true
 });
@@ -119,7 +119,7 @@ function experimentInit() {
   welcome_txt = new visual.TextStim({
     win: psychoJS.window,
     name: 'welcome_txt',
-    text: 'Hello and welcome.\n\nYou are taking part in a task interaction experiment with another participant. You will both do the same task which will be given in a sequence of 3 trials.\nBefore the task, instructions will be given to either respond yourself or to observe how the other particpant responded. \n\nThe goal is to keep track of the errors of the other participant. After every 3 trials, you have to point out if the other participant made a mistake or not.\n\nSince this is an online experiment, you will be interacting with a previous participant. This means that you will interact with the other person by his/hers stored data. \n\nPress the spacebar to go continue.\n',
+    text: 'Hello and welcome to this experiment.\n\nFor this research, you will take part in an interaction task with another participant. You will both do the same task which will be explained on the next screen. Before the task, instructions will be given to either respond yourself or to observe how the other particpant responded. \n\nThe goal is to keep track of the errors of the other participant. After every 3 trials, you have to point out if the other participant made a mistake or not.\n\nSince this is an online experiment, you will be interacting with a previous participant. This means that you will interact with the other person by his/hers stored data. \n\nPress the spacebar to go continue.\n',
     font: 'Arial',
     units: 'norm', 
     pos: [0, 0], height: 0.064,  wrapWidth: undefined, ori: 0,
@@ -134,7 +134,7 @@ function experimentInit() {
   general_instruct_txt = new visual.TextStim({
     win: psychoJS.window,
     name: 'general_instruct_txt',
-    text: 'You will see a row of five arrowheads next to eachother like this: \n<<<<< \n\nFocus on the arrowhead in the middle:\n- PRESS ‘ f ‘ on the keyboard when middle arrowhead is pointed to the LEFT\n\n- PRESS ‘ j ‘ on the keyboard when middle arrowhead is pointed to the RIGHT\n\nThe arrowheads around the middle one can have another direction like this: \n<<><<\n\nOnly respond to the direction of the arrowhead in the middle \n(in this case: right —>  press ‘j’).  Ignore the arrowheads around it. \n\nAnswer as fast as possible!\nIf you understand these instructions, press the spacebar to continue. \n',
+    text: 'You will see a row of five arrowheads next to eachother like this: \n<<<<< \n\nFocus on the arrowhead in the middle:\n- PRESS ‘ f ‘ on the keyboard when middle arrowhead is pointed to the LEFT\n- PRESS ‘ j ‘ on the keyboard when middle arrowhead is pointed to the RIGHT\n\nThe arrowheads around the middle one can have another direction like this: \n<<><<\n\nOnly respond to the direction of the arrowhead in the middle (in this case: right —>  press ‘j’).  Ignore the arrowheads around it. \n\nAnswer as fast as possible!\nIf you understand these instructions, press the spacebar to continue. \n',
     font: 'Arial',
     units: 'norm', 
     pos: [0, 0], height: 0.064,  wrapWidth: undefined, ori: 0,
@@ -758,67 +758,52 @@ function BlockLoopBegin(BlockLoopScheduler) {
     BlockLoopScheduler.add(OPP_instructRoutineBegin(snapshot));
     BlockLoopScheduler.add(OPP_instructRoutineEachFrame(snapshot));
     BlockLoopScheduler.add(OPP_instructRoutineEnd(snapshot));
-    const OPPLoopScheduler = new Scheduler(psychoJS);
-    BlockLoopScheduler.add(OPPLoopBegin, OPPLoopScheduler);
-    BlockLoopScheduler.add(OPPLoopScheduler);
-    BlockLoopScheduler.add(OPPLoopEnd);
+    const Trials_O1LoopScheduler = new Scheduler(psychoJS);
+    BlockLoopScheduler.add(Trials_O1LoopBegin, Trials_O1LoopScheduler);
+    BlockLoopScheduler.add(Trials_O1LoopScheduler);
+    BlockLoopScheduler.add(Trials_O1LoopEnd);
+    BlockLoopScheduler.add(RSIRoutineBegin(snapshot));
+    BlockLoopScheduler.add(RSIRoutineEachFrame(snapshot));
+    BlockLoopScheduler.add(RSIRoutineEnd(snapshot));
+    const Trials_P_2LoopScheduler = new Scheduler(psychoJS);
+    BlockLoopScheduler.add(Trials_P_2LoopBegin, Trials_P_2LoopScheduler);
+    BlockLoopScheduler.add(Trials_P_2LoopScheduler);
+    BlockLoopScheduler.add(Trials_P_2LoopEnd);
+    BlockLoopScheduler.add(RSIRoutineBegin(snapshot));
+    BlockLoopScheduler.add(RSIRoutineEachFrame(snapshot));
+    BlockLoopScheduler.add(RSIRoutineEnd(snapshot));
+    const Trials_P_3LoopScheduler = new Scheduler(psychoJS);
+    BlockLoopScheduler.add(Trials_P_3LoopBegin, Trials_P_3LoopScheduler);
+    BlockLoopScheduler.add(Trials_P_3LoopScheduler);
+    BlockLoopScheduler.add(Trials_P_3LoopEnd);
     BlockLoopScheduler.add(Error_estimationRoutineBegin(snapshot));
     BlockLoopScheduler.add(Error_estimationRoutineEachFrame(snapshot));
     BlockLoopScheduler.add(Error_estimationRoutineEnd(snapshot));
     BlockLoopScheduler.add(POP_instructRoutineBegin(snapshot));
     BlockLoopScheduler.add(POP_instructRoutineEachFrame(snapshot));
     BlockLoopScheduler.add(POP_instructRoutineEnd(snapshot));
-    const POPLoopScheduler = new Scheduler(psychoJS);
-    BlockLoopScheduler.add(POPLoopBegin, POPLoopScheduler);
-    BlockLoopScheduler.add(POPLoopScheduler);
-    BlockLoopScheduler.add(POPLoopEnd);
+    const Trials_P_4LoopScheduler = new Scheduler(psychoJS);
+    BlockLoopScheduler.add(Trials_P_4LoopBegin, Trials_P_4LoopScheduler);
+    BlockLoopScheduler.add(Trials_P_4LoopScheduler);
+    BlockLoopScheduler.add(Trials_P_4LoopEnd);
+    BlockLoopScheduler.add(RSIRoutineBegin(snapshot));
+    BlockLoopScheduler.add(RSIRoutineEachFrame(snapshot));
+    BlockLoopScheduler.add(RSIRoutineEnd(snapshot));
+    const Trials_O_5LoopScheduler = new Scheduler(psychoJS);
+    BlockLoopScheduler.add(Trials_O_5LoopBegin, Trials_O_5LoopScheduler);
+    BlockLoopScheduler.add(Trials_O_5LoopScheduler);
+    BlockLoopScheduler.add(Trials_O_5LoopEnd);
+    BlockLoopScheduler.add(RSIRoutineBegin(snapshot));
+    BlockLoopScheduler.add(RSIRoutineEachFrame(snapshot));
+    BlockLoopScheduler.add(RSIRoutineEnd(snapshot));
+    const Trials_P_6LoopScheduler = new Scheduler(psychoJS);
+    BlockLoopScheduler.add(Trials_P_6LoopBegin, Trials_P_6LoopScheduler);
+    BlockLoopScheduler.add(Trials_P_6LoopScheduler);
+    BlockLoopScheduler.add(Trials_P_6LoopEnd);
     BlockLoopScheduler.add(Error_estimationRoutineBegin(snapshot));
     BlockLoopScheduler.add(Error_estimationRoutineEachFrame(snapshot));
     BlockLoopScheduler.add(Error_estimationRoutineEnd(snapshot));
     BlockLoopScheduler.add(endLoopIteration(BlockLoopScheduler, snapshot));
-  });
-
-  return Scheduler.Event.NEXT;
-}
-
-
-var OPP;
-function OPPLoopBegin(OPPLoopScheduler) {
-  // set up handler to look after randomisation of conditions etc
-  OPP = new TrialHandler({
-    psychoJS: psychoJS,
-    nReps: 1, method: TrialHandler.Method.RANDOM,
-    extraInfo: expInfo, originPath: undefined,
-    trialList: undefined,
-    seed: undefined, name: 'OPP'
-  });
-  psychoJS.experiment.addLoop(OPP); // add the loop to the experiment
-  currentLoop = OPP;  // we're now the current loop
-
-  // Schedule all the trials in the trialList:
-  OPP.forEach(function() {
-    const snapshot = OPP.getSnapshot();
-
-    OPPLoopScheduler.add(importConditions(snapshot));
-    const Trials_O1LoopScheduler = new Scheduler(psychoJS);
-    OPPLoopScheduler.add(Trials_O1LoopBegin, Trials_O1LoopScheduler);
-    OPPLoopScheduler.add(Trials_O1LoopScheduler);
-    OPPLoopScheduler.add(Trials_O1LoopEnd);
-    OPPLoopScheduler.add(RSIRoutineBegin(snapshot));
-    OPPLoopScheduler.add(RSIRoutineEachFrame(snapshot));
-    OPPLoopScheduler.add(RSIRoutineEnd(snapshot));
-    const Trials_P_2LoopScheduler = new Scheduler(psychoJS);
-    OPPLoopScheduler.add(Trials_P_2LoopBegin, Trials_P_2LoopScheduler);
-    OPPLoopScheduler.add(Trials_P_2LoopScheduler);
-    OPPLoopScheduler.add(Trials_P_2LoopEnd);
-    OPPLoopScheduler.add(RSIRoutineBegin(snapshot));
-    OPPLoopScheduler.add(RSIRoutineEachFrame(snapshot));
-    OPPLoopScheduler.add(RSIRoutineEnd(snapshot));
-    const Trials_P_3LoopScheduler = new Scheduler(psychoJS);
-    OPPLoopScheduler.add(Trials_P_3LoopBegin, Trials_P_3LoopScheduler);
-    OPPLoopScheduler.add(Trials_P_3LoopScheduler);
-    OPPLoopScheduler.add(Trials_P_3LoopEnd);
-    OPPLoopScheduler.add(endLoopIteration(OPPLoopScheduler, snapshot));
   });
 
   return Scheduler.Event.NEXT;
@@ -930,56 +915,6 @@ function Trials_P_3LoopEnd() {
 }
 
 
-function OPPLoopEnd() {
-  psychoJS.experiment.removeLoop(OPP);
-
-  return Scheduler.Event.NEXT;
-}
-
-
-var POP;
-function POPLoopBegin(POPLoopScheduler) {
-  // set up handler to look after randomisation of conditions etc
-  POP = new TrialHandler({
-    psychoJS: psychoJS,
-    nReps: 1, method: TrialHandler.Method.RANDOM,
-    extraInfo: expInfo, originPath: undefined,
-    trialList: undefined,
-    seed: undefined, name: 'POP'
-  });
-  psychoJS.experiment.addLoop(POP); // add the loop to the experiment
-  currentLoop = POP;  // we're now the current loop
-
-  // Schedule all the trials in the trialList:
-  POP.forEach(function() {
-    const snapshot = POP.getSnapshot();
-
-    POPLoopScheduler.add(importConditions(snapshot));
-    const Trials_P_4LoopScheduler = new Scheduler(psychoJS);
-    POPLoopScheduler.add(Trials_P_4LoopBegin, Trials_P_4LoopScheduler);
-    POPLoopScheduler.add(Trials_P_4LoopScheduler);
-    POPLoopScheduler.add(Trials_P_4LoopEnd);
-    POPLoopScheduler.add(RSIRoutineBegin(snapshot));
-    POPLoopScheduler.add(RSIRoutineEachFrame(snapshot));
-    POPLoopScheduler.add(RSIRoutineEnd(snapshot));
-    const Trials_O_5LoopScheduler = new Scheduler(psychoJS);
-    POPLoopScheduler.add(Trials_O_5LoopBegin, Trials_O_5LoopScheduler);
-    POPLoopScheduler.add(Trials_O_5LoopScheduler);
-    POPLoopScheduler.add(Trials_O_5LoopEnd);
-    POPLoopScheduler.add(RSIRoutineBegin(snapshot));
-    POPLoopScheduler.add(RSIRoutineEachFrame(snapshot));
-    POPLoopScheduler.add(RSIRoutineEnd(snapshot));
-    const Trials_P_6LoopScheduler = new Scheduler(psychoJS);
-    POPLoopScheduler.add(Trials_P_6LoopBegin, Trials_P_6LoopScheduler);
-    POPLoopScheduler.add(Trials_P_6LoopScheduler);
-    POPLoopScheduler.add(Trials_P_6LoopEnd);
-    POPLoopScheduler.add(endLoopIteration(POPLoopScheduler, snapshot));
-  });
-
-  return Scheduler.Event.NEXT;
-}
-
-
 var Trials_P_4;
 function Trials_P_4LoopBegin(Trials_P_4LoopScheduler) {
   // set up handler to look after randomisation of conditions etc
@@ -1080,13 +1015,6 @@ function Trials_P_6LoopBegin(Trials_P_6LoopScheduler) {
 
 function Trials_P_6LoopEnd() {
   psychoJS.experiment.removeLoop(Trials_P_6);
-
-  return Scheduler.Event.NEXT;
-}
-
-
-function POPLoopEnd() {
-  psychoJS.experiment.removeLoop(POP);
 
   return Scheduler.Event.NEXT;
 }
